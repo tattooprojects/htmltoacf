@@ -1,0 +1,18 @@
+{
+  "name": "htmltoacf",
+  "version": "1.0.0",
+  "description": "A command line tool that will scrape webpages and convert text elements into JSON objects you can import into Advanced Custom Fields to create content bindings in WordPress for a given page.",
+  "main": "bin/index.js",
+  "bin": {
+    "htmltoacf": "./bin/index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ryan Boddy",
+  "license": "ISC",
+  "dependencies": {
+    "node-html-parser": "^6.1.5",
+    "yargs": "^17.7.2"
+  }
+}

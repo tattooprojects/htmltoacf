@@ -14,6 +14,10 @@ Install the CLI and then run the following command to scrape http://localhost/:
 
 `htmltoacf -u http://localhost/ -p "Home Page"`
 
+Optionally, you can provide a parent ID for a wrapper element for the content you want to scrape. I use Sveltekit, and I don't want text elements from my nav or footer elements, so I wrap my <slot></slot> tag in a div with an ID that I pass in to get page specific content. The command looks like this:
+
+`htmltoacf -u http://localhost/ -p "Home Page" -i "page-content"`
+
 You can also run the help command in your terminal to see usage instructions:
 
 `htmltoacf --help`

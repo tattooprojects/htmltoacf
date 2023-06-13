@@ -9,8 +9,9 @@ const nanoid = customAlphabet('1234567890abcdef', 10)
 const usage = "\nUsage: Pass a webpage address to scrape for text elements to be transformed into ACF fields.";
 const options = yargs  
       .usage(usage)  
-      .option("u", {alias:"url", describe: "The URL of the page you want scraped.", type: "String", demandOption: true })
-      .option("p", {alias:"page", describe: "The name of the page you're importing.", type: "String", demandOption: true })                                         
+      .option("u", {alias:"url", describe: "The URL of the page you want scraped.", type: "string", demandOption: true })
+      .option("p", {alias:"page", describe: "The name of the page you're importing.", type: "string", demandOption: true })
+      .option("i", {alias:"htmlID", describe: "The ID of the particular parent element you want to scrape. If not provided, it will scrape the entire document.", type: "string", demandOption: false})                                      
       .help(true)  
       .argv;
 
@@ -23,7 +24,15 @@ async function process(){
 
     const root = HTMLParser.parse(page);
 
-    let allEls = root.querySelectorAll("*");
+    let allEls;
+
+    console.log(yargs.argv.i)
+    if(yargs.argv.id != undefined){
+        allEls = root.querySelectorAll(yargs.argv.i);
+    }
+    else {
+        allEls = root.querySelectorAll("*");
+    }
 
     let importBlock = {
         "key": "group_6458fccb6b51d",

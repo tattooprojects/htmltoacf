@@ -26,9 +26,9 @@ async function process(){
 
     let allEls;
 
-    console.log(yargs.argv.i)
-    if(yargs.argv.id != undefined){
-        allEls = root.querySelectorAll(yargs.argv.i);
+    if(yargs.argv.i != undefined){
+        let parentEl = root.getElementById(`${yargs.argv.i}`)
+        allEls = parentEl.querySelectorAll("*");
     }
     else {
         allEls = root.querySelectorAll("*");

@@ -35,7 +35,7 @@ async function process(){
     }
 
     let importBlock = {
-        "key": "group_6458fccb6b51d",
+        "key": `group_${nanoid(13)}`,
         "title": yargs.argv.p,
         "fields": [],
         "menu_order": 0,

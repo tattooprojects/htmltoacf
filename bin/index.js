@@ -48,7 +48,7 @@ async function process(){
         "description": "",
         "show_in_rest": 0,
         "show_in_graphql": 1,
-        "graphql_field_name": yargs.argv.preplace(/\s/g, ''),
+        "graphql_field_name": yargs.argv.replace(/\s/g, ''),
         "map_graphql_types_from_location_rules": 0,
         "graphql_types": ""
     };

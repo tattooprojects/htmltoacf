@@ -12,7 +12,7 @@ This utility allows you to pass in the local (or remote) URL of any webpage, scr
 
 Install the CLI and then run the following command to scrape http://localhost/:
 
-`htmltoacf -u http://localhost/`
+`htmltoacf -u http://localhost/ -p "Home Page"`
 
 You can also run the help command in your terminal to see usage instructions:
 

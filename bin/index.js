@@ -89,7 +89,7 @@ async function process(){
                 importBlock.fields.push(field);
                 headerIterator++;
                 break;
-            case "p":
+            case "P":
                 field = {
                     "key": `field_${nanoid(13)}`,
                     "label": `Paragraph ${paragraphIterator}`,

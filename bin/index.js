@@ -114,6 +114,8 @@ async function process(){
                 importBlock.fields.push(field);
                 paragraphIterator++;
                 break;
+            default:
+                break;
         }
     }
 
